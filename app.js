@@ -3,8 +3,8 @@ const PAPER = "PAPER";
 const SISSORS = "SISSORS";
 const CHANCES = 5;
 
-let computerWins = "Computer Wins this round";
-let playerWins = "Players Wins this round";
+let computerWins = "You Lose!";
+let playerWins = "You Win!";
 
 function game()
 {
@@ -12,16 +12,17 @@ function game()
     let score_c = 0;
     for(i = 0 ; i<CHANCES;i++)
     {
-        win = playRound(ROCK,getComputerChoice())
+        win = playRound(getUserChoice(prompt("please enter your input")),getComputerChoice())
         win === computerWins? score_c = score_c+1: win === playerWins ? score_user = score_user + 1 : score_user = score_user;
         console.log(win);
+        console.log(score_c,score_user);
     }
     return score_c > score_user ? "Computer_Wins": score_user > score_c ? "User_Wins": "DRAW";
 }
 
 function getUserChoice(choice=playerSelection)
 {
-    if(typeof choice != String)
+    if(typeof choice != "string")
     {
         throw TypeError;
     }
@@ -52,31 +53,37 @@ function playRound(playerSelection, computerSelection) {
         case ROCK:
             if(computerSelection===SISSORS)
             {
+                console.log(playerWins , playerSelection , " beats", computerSelection)
                 return playerWins;
             }
             else
             {
+                console.log(computerWins , computerSelection + " beats" ,playerSelection)
                 return computerWins;
             }
             break;
         case PAPER:
         if(computerSelection===SISSORS)
             {
+                console.log(computerWins , computerSelection , " beats" , playerSelection)
                 return computerWins;
             }
             else
             {
+                console.log(playerWins , playerSelection , " beats" ,computerSelection)
                 return playerWins;
             }
             break;
         case SISSORS:
             if(computerSelection===ROCK)
             {
+                console.log(playerWins , playerSelection , " beats" ,computerSelection)
                 return playerWins;
             }
             else
             {
-                return computerWins;
+                console.log(computerWins, computerSelection ," beats" , playerSelection)
+                return computerWins ;
             }
             break;
         default:
