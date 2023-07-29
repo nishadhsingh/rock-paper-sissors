@@ -1,0 +1,112 @@
+
+
+
+
+html
+{
+    background-color: #9ceeee;
+    height: 100%;
+}
+body
+{
+    height: 100%;
+}
+
+
+.parent
+{
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    gap: 10%;
+}
+
+.child
+{
+    background-color: beige ;
+    height: max-content;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-height: 20%;
+}
+.controls
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.buttonholder
+{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 10% ;
+    flex-grow: 0.4;
+    height: 100px;
+    width: 1500px;
+    
+}
+
+.input
+{
+    background-color: #222323;
+    max-height: 85%;
+    max-width: 10%;
+    height: 85%;
+    width: 5%;
+    aspect-ratio: 1/1;
+    width: max-content;
+    transition: all;
+    border-radius: 5%;
+    flex-grow: 1;
+}
+
+Button:hover
+{
+    background-color: #555149 ;
+    
+}
+
+
+
+.box{
+    display: inline-block;
+    font-size:larger;
+    font-weight: 500;
+    
+}
+
+
+.playarea
+{
+    display: flex;
+    gap: 1000px;
+    padding-left: 400px;
+    
+}
+.text-bubble
+{
+    color: #06533c;
+    text-align: center;
+    background-color: rgb(182, 204, 233);
+    width: max-content;
+    border-radius: 5px 20px 15px;
+    height: 20px;
+    transition: 0.7;
+    margin : 5px;
+    font-size: medium;
+    font-family: monospace;
+}
+
+#text-area
+{
+    display: flex;
+    flex :1;
+    flex-direction: column;
+    justify-content: space-around;
+}

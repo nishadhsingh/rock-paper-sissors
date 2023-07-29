@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Sissors</title>
-    <script src="app.js"></script>
+    <script src="app.js" defer="true"></script>
+    <link href="./style.css" rel="stylesheet">
 </head>
 <body>
+    <div class="parent">
+    <div class="board child" id="text-area">
+        <p class="board_text text-bubble"></p>
+        <p class="board_text2 text-bubble"></p>
+        <p class="board_result text-bubble"></p>
+    </div>
     
+    <div class="playarea child">
+        
+        <div class="box">
+            <p>😼 </p>
+            <p class="userscore">YOU</p>
+        </div>
+        <div class="box">
+            <p >💻</p>
+            <p class="cumputerscore">My A.I</p>
+        </div>
+        <p class="display"></p>
+    </div>
+    <div class="controls child">
+        <div class="buttonholder">
+        <button class="input" onclick="userChoice(event)" value="Rock" >✊🏻</button>
+        <button class="input" onclick="userChoice(event)" value="Paper">🫱🏻</button>
+        <button class="input" onclick="userChoice(event)" value="Sissors">✌🏻</button>
+    </div>
+    </div>
+    </div>
 </body>
 </html>
